@@ -99,9 +99,24 @@ npx =>  means executing the pakage. we are execute parcel goese in to index.html
 - it's give you power to what verison of browser should support our application defind desire verison in package.json file.
 
 
+# 3. laying the foundation
+
+- If you customize command through command configure in package.json in scripts properites through keyword "start","build","test" , you show accroding your purpose set command.
 
 
+- so first we strong on foundation again 
+- So you think React element is  html element but you are wrong react element is end of day is object.
 
+
+- ReactDOM lib convert react object in to html element and push on web.
+
+- JSx is not HTML in javscript JSX is HTML-Lite or LIKe syntax but both are differnent.
+
+# Component - 
+
+- There are two types of component 1. class based components 2. functional based components
+
+- JSX has super power inside JSX your can write any javscript expression indie {} curly braces.
 
 
 
