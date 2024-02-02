@@ -1,0 +1,33 @@
+{
+  "name": "namste-react",
+  "version": "1.0.0",
+  "description": "this is namste react by codewithkrish",
+ 
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "react",
+    "namstereact",
+    "krish"
+  ],
+  "author": "krish carter",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+    "browserslist":{
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version",
+        "last 1 edge version",
+        "IE 11"
+      ]
+  }
+}

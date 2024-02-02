@@ -4,6 +4,12 @@
 
 // ReactElement(Object) => HTML (Browser Understands);
 
+import React from "react";
+// here meaning of import is React is coming from nodemodules React package;
+import ReactDOM from "react-dom/client";
+
+
+
 const heading = React.createElement(
   "h1",
   { id: "heading", kan: "dscipline" },
