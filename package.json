@@ -5,7 +5,7 @@
  
   "scripts": {
     "test": "jest",
-    "start":"npm run start" 
+    "start":"npx parcel index.html" 
   },
   "keywords": [
     "react",

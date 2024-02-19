@@ -120,6 +120,32 @@ npx =>  means executing the pakage. we are execute parcel goese in to index.html
 
 
 
+# 4. food-odering app
+
+- First make planing according design break in to component.
+
+- according planing make write code step by step 
+
+- what is props? when we have dynamically passing a data in component passing as props simple.  props is one kind how your pass argumet in function as well as.
+
+-  access props inside component so props is whatever pass in object javascript object that reason you access through {props.properties}
+
+- we also destructuring props {name, titile, ...props}
+
+- {...props} = you show so manytime in gihtub code it means use rest operatore all props pass in component.
+
+- data come from api in JSON format 
+
+
+- you also show in network tab of devtools how datacome in swiggy application 
+
+- swiggy use config-driven ui (one kind of system design name):>>>> menas data show on webpage accroding confiure data user like website open in gujrat show differnce style of webpage , show something and not show something .
+
+
+- when we iterate data through map foreach method or other method we must give key (id not idex as key). because index as key is anti-pattern. if your data from backend id please tell give id for good practicing.
+
+
+- not using key(not acceptable) <<<<<< index as key <<<<<<<<< id as key (good practices)
 
 
 

@@ -1,0 +1,134 @@
+
+body{
+  /* max-width:1400px; */
+  margin: auto; 
+  width:100%;
+}
+
+.header {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.log-container {
+  display: flex;
+  align-items: center;
+  width: 190px;
+  height: 90px;
+  margin-left: 2rem;
+  padding-top: 0.2rem;
+}
+
+.log-container img {
+ 
+  /* object-fit: cover; */
+  border: 1px transparent;
+    max-width: 100%;
+  max-height: 100%;
+  display: block;
+  border-radius: 60%;
+}
+
+img:hover {
+  border: 2px solid black;
+}
+
+.header .nav-items {
+  margin-right: 2rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header .nav-items > ul {
+  display: flex;
+  font-size: 1.2rem;
+  list-style: none;
+}
+.header .nav-items > ul > li {
+  padding: 10px;
+  margin: 10px;
+  cursor:pointer;
+
+}
+
+
+/* Body CSS */
+
+.serach{
+  width:60%;
+  padding: 4px;
+  margin: auto;
+}
+
+input {
+  width: 60%;
+  height: 26px;
+  /* margin:auto; */
+  background-color:#212121;
+  padding: 0.5rem;
+  border:2px solid black;
+  border-radius: 2%;
+  color: white;
+}
+
+div > .btn {
+  color: wheat;
+  height: 45px;
+  background-color: #212121;
+  border: 1px transparent;
+  border-radius: 2%;
+  margin-left: 0.1rem;
+  cursor:pointer;
+  
+}
+
+
+
+.restaurant-list{
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+
+.card{
+  /* width: 200px; */
+  width: 252px;
+  border-radius: 5px;
+  box-shadow: -1px 4px 20px 14px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.card > img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card > span{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card > span > h4{
+  text-align: center;
+}
+
+.card > span > h4:first-child{
+  display: flex;
+  align-items: center;
+  background-color: rgb(19, 176, 1);
+  border-radius: 5px;
+  padding: 0 5px 0;
+  color: white;
+}
+
+.card > span > h4:first-child .fa-star{
+  font-size: small;
+  padding: 0 5px 3px 0;
+}

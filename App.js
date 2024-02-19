@@ -1,63 +1,113 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Logo from "./assets/logo.jpg";
+import { restaurantList } from "./RestaurantData";
+import "./style/main.css";
 
-// React Element
+console.log("restaurantList", restaurantList);
 
-const heading = React.createElement("h1", { id: "heading" }, "Namste react🚀 ");
-const headingg = (
-  <h2 className="heading" tabIndex="2">
-    {" "}
-    i am react element 🚀
-  </h2>
-);
+/* My Food App structure will look like this, 
+            1) Header
+                - Logo
+                - Nav Items(right side)
+                - Cart
+            2) Body
+                - Search bar
+                - Restaurants List
+                    - Restaurant card
+                        - Image
+                        - Name
+                        - Rating
+            3) Footer
+                - Links
+                - Copyrights
+       
+                
+*/
 
-// above code is not good way to creat element for large scale applicatio or project.
-// lot's developer think jsx is part of react but not react and jsx is both are different thing .
-
-// JSX
-
-// JSX (transpiled before it reaches the JS) - PARCEL - BABEL
-
-//JSX =>BABEL transples in to  React.createElement() =>  ReactElement.js(object) = >  HTMLElement(redner); with help of parcel behind babel js
-const jsxHeading = (
-  <h1 id="heading" className="heading">
-    jsx
-  </h1>
-);
-
-const Title = function () {
+const Header = () => {
   return (
-    <h2 className="heading" tabIndex="2">
-      i am react element 🚀
-    </h2>
+    <div className="header" style={{backgroundColor:"#264653"}}>
+      <div className="log-container">
+        <img className="logo" src={Logo} alt="" />
+      </div>
+      <div className="nav-items">
+        <ul style={{color:"wheat"}}>
+          <li>Foods</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
   );
 };
-const Title1 = (
-  <h2 className="heading" tabIndex="2">
-    i am react element 🚀
-  </h2>
-);
 
-// React Component
+const RestaurantCard = (props) => {
+  console.log('props', props?.restoaurantD?.data);
 
-// Functional component
-//Component composition
-const HeadingComponent = () => (
-  <>
-    {Title1} // any javscripit include in jsx with curly braces
-    {/* <Title /> */}
-    {/* <Title></Title> */}
-    {/* {Title()} */}
-    <h1 id="heading">Namste code with krish make functional component🚀</h1>
-  </>
-);
 
-// const headingComp1=()=>{
-// return <h1>Namste code with krish make functional component</h1>
-// }
+  // const {area} = props?.restoaurantD?.data || {}
 
-// const headingComp2 = ()=> <h1>heading componenet in shortend syntax</h1>
+  // console.log('resto', restoaurantD?.restoaurantD?.data?.avgRating);
+  
+
+  const {name, cuisines, area, avgRating, lastMileTravelString, costForTwoString, cloudinaryImageId} = props?.restoaurantD?.data || {};
+
+  
+    return (
+      <div className="card"  style={{backgroundColor:"#cdb4db"}}>
+        <img
+          src={
+            "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
+            cloudinaryImageId
+          }
+        />
+  
+        <h2>{name}</h2>
+        <h4>{cuisines?.join(", ")}</h4>
+        <h4>{area} </h4>
+        <span>
+          <h4>
+            <i className="fa-solid fa-star">{avgRating}</i>5.5
+          </h4>
+          <h4>{lastMileTravelString}</h4>
+          <h4>{costForTwoString}</h4>
+        </span>
+      </div>
+    );
+};
+
+const Body = () => {
+  return (
+    <div className="body" style={{backgroundColor:"#a2d2ff"}}>
+      <div className="serach" >
+        <input  type="text" placeholder="enter your desire dish or resturent" />
+        <button className="btn">search</button>
+      </div>
+      <div className="restaurant-list">
+        {restaurantList.map((restoaurant) => {
+
+          return (
+            <RestaurantCard  restoaurantD={restoaurant} key={restoaurant?.data?.id}/>
+          )
+        })}
+        <RestaurantCard />
+      </div>
+    </div>
+  );
+};
+
+const App = () => {
+  return (
+    <div className="app">
+      <Header />
+
+      <Body />
+    </div>
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<HeadingComponent />);
+root.render(<App />);
